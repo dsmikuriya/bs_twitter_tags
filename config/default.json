@@ -1,0 +1,39 @@
+{
+    "twitter": {
+        "consumer_key": "",
+        "consumer_secret": "",
+        "access_token_key": "",
+        "access_token_secret": ""
+    },
+    "database": {
+        "client": "mysql",
+        "connection": {
+            "host": "localhost",
+            "user": "mikuriya",
+            "password": "mikuriya",
+            "database": "bs_twitter_development",
+            "charset": "utf8mb4",
+            "timezone": "UTC"
+        }
+    },
+    "log4js": {
+        "appenders": {
+            "file": {
+                "type": "file",
+                "filename": "./logs/app.log",
+                "maxLogSize": 10000000,
+                "numBackups": 10,
+                "encoding": "utf-8"
+            },
+            "out": {
+                "type": "stdout"
+            }
+        },
+        "categories": {
+            "default": {
+                "appenders": [ "file", "out" ],
+                "level": "debug"
+            }
+        }
+    }
+}
